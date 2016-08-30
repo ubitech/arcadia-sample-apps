@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>eu.arcadia</groupId>
+    <artifactId>sample-apps</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>sample-apps</name>
+    <url>http://www.arcadia-framework.eu</url>
+    <description>ARCADIA Sample Applications</description>
+  
+    <modules>		
+        
+        <!-- Component1 -->
+        <module>component1</module>                        
+        <!-- Component2 -->
+        <module>component2</module>                
+        <!-- Component3 -->
+        <module>component3</module>
+    </modules>
+                        
+    <properties>
+        <!-- basic project settings-->
+        <project.source.charset>UTF-8</project.source.charset>
+        <project.source.encoding>UTF-8</project.source.encoding>
+        <java.version.source>1.8</java.version.source>
+        <java.version.target>1.8</java.version.target>
+        <!-- mojo settings -->
+        <maven.compiler.plugin>3.3</maven.compiler.plugin>
+    </properties>        
+    
+    <build>	        
+        <plugins>	  
+            <!-- Java Compatibility-->  
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin}</version>
+                <configuration>
+                    <charset>${project.source.charset}</charset>
+                    <encoding>${project.source.encoding}</encoding>
+                    <source>${java.version.source}</source>
+                    <target>${java.version.target}</target>
+                </configuration>
+            </plugin> 
+        </plugins>
+    </build>
+            
+              
+</project> 
